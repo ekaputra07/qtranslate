@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>540</width>
+    <height>366</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>540</width>
+    <height>366</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>540</width>
+    <height>366</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>QTranslator</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>res/arrow_refresh.png</normaloff>res/arrow_refresh.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>542</width>
+     <height>16777215</height>
+    </size>
+   </property>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>71</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>From :</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>170</y>
+      <width>91</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Translate to :</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="cbTo">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>160</y>
+      <width>53</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>EN</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>ID</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QComboBox" name="cbFrom">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>10</y>
+      <width>53</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>ID</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>EN</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QTextEdit" name="txtOriginal">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>50</y>
+      <width>521</width>
+      <height>91</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="txtResult">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>200</y>
+      <width>521</width>
+      <height>91</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblStatus">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>20</y>
+      <width>141</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Ready...</string>
+    </property>
+   </widget>
+   <widget class="Line" name="line">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>10</y>
+      <width>20</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="line_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>140</y>
+      <width>521</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>32</width>
+     <height>32</height>
+    </size>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextUnderIcon</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionTranslate"/>
+   <addaction name="separator"/>
+   <addaction name="actionAbout"/>
+   <addaction name="separator"/>
+   <addaction name="actionClose"/>
+  </widget>
+  <action name="actionTranslate">
+   <property name="icon">
+    <iconset>
+     <normaloff>res/arrow_refresh.png</normaloff>res/arrow_refresh.png</iconset>
+   </property>
+   <property name="text">
+    <string>Translate</string>
+   </property>
+   <property name="toolTip">
+    <string>Translate</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="icon">
+    <iconset>
+     <normaloff>res/information.png</normaloff>res/information.png</iconset>
+   </property>
+   <property name="text">
+    <string>About</string>
+   </property>
+   <property name="toolTip">
+    <string>About QTranslator</string>
+   </property>
+  </action>
+  <action name="actionClose">
+   <property name="icon">
+    <iconset>
+     <normaloff>res/door_in.png</normaloff>res/door_in.png</iconset>
+   </property>
+   <property name="text">
+    <string>Close</string>
+   </property>
+   <property name="toolTip">
+    <string>Close Program</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>actionClose</sender>
+   <signal>activated()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>269</x>
+     <y>182</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
